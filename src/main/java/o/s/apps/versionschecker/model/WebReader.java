@@ -10,7 +10,6 @@ import java.net.URL;
 public class WebReader {
     private String url;
 
-
     public WebReader(String url){
         this.url = url;
     }
@@ -29,6 +28,8 @@ public class WebReader {
             in.close();
             return buffer.toString();
         } catch (Exception e) {
+            System.out.println("WebReader.class: read url failed >" + url);
+            System.out.println(e.getLocalizedMessage());
             return "";
         }
     }

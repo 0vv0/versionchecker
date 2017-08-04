@@ -20,7 +20,13 @@ public class MainController {
     @ResponseBody
     String index(){
         String temp = "<table border=2>";
-        checks.forEach((x,y)->y.reCheck());
+        checks.forEach((x, y) -> {
+            try {
+                y.reCheck();
+            } catch (Exception e) {
+                System.out.println(e.getLocalizedMessage());
+            }
+        });
 
         for (String s : checks.keySet()) {
             temp+= "<tr><td>" + s + "</td><td>" + checks.get(s).getCurrentVersion() + "</td></tr>";

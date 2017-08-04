@@ -5,5 +5,5 @@ package o.s.apps.versionschecker.model;
  */
 public interface Checkable {
     String getCurrentVersion();
-    Boolean reCheck();
+    Boolean reCheck() throws Exception;
 }
