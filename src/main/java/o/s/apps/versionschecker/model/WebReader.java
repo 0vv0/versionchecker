@@ -15,10 +15,10 @@ public class WebReader {
         this.url = url;
     }
 
-    public String read(){
-        return read(url);
+    public String readPage(){
+        return readPage(url);
     }
-    public static String read(String url){
+    public static String readPage(String url){
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(new URL(url).openStream()));
             String inputLine;
@@ -35,7 +35,7 @@ public class WebReader {
 
     public static String getVersionByTag(String url, String tag){
         String version = "";
-        String html = read(url);
+        String html = readPage(url);
 
         if (html.contains("<" + tag)) {
             html = html.substring(html.indexOf("<" + tag) + 1 + tag.length());
