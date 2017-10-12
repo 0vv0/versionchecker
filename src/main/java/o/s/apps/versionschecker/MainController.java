@@ -32,7 +32,6 @@ public class MainController {
             temp+= "<tr><td>" + s + "</td><td>" + checks.get(s).getCurrentVersion() + "</td></tr>";
         }
         temp+="</table>";
-
         return temp;
     }
 }
