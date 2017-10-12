@@ -7,7 +7,7 @@ import o.s.apps.versionschecker.model.WebReader;
  * Created by admin on 8/4/2017.
  */
 public class Ghostscript extends App {
-    private final String url = "https://ghostscript.com/Releases.html";
+    private final String url = "ghostscript.com/Releases.html";
     private final String text = "Ghostscript_";
     private final String text2 = "Ghostscript ";
 
